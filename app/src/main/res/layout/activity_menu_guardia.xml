@@ -1,86 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#04375A"
-    tools:context=".MenuGuardia">
+    android:fitsSystemWindows="true"
+    tools:context=".MenuGuardia"
+    android:background="@color/colorBackground">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="210dp"
-        android:layout_height="210dp"
-        android:layout_marginTop="64dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/reyes" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
 
-    <Button
-        android:id="@+id/btnMGSOS"
-        android:layout_width="wrap_content"
-        android:layout_height="130dp"
-        android:layout_marginTop="68dp"
-        android:background="@drawable/fondo_rojo"
-        android:onClick="onClick"
 
-        android:text="SOS"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6">
 
-    <Button
-        android:id="@+id/btnMGMarcar"
-        android:onClick="onClick"
-        android:layout_width="200dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/fondo_amarillo"
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/reyes" />
 
-        android:text="MARCAR"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMGSOS" />
+        </RelativeLayout>
 
-    <Button
-        android:id="@+id/btnMGHistorial"
-        android:onClick="onClick"
-        android:layout_width="200dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="4dp"
-        android:background="@drawable/fondo_naranja"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50sp"
+            android:layout_weight="0.4"
+            android:orientation="vertical"
+            android:padding="10dp">
 
-        android:text="HISTORIAL"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMGSOS" />
+            <Button
+                android:id="@+id/btnMGSOS"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:theme="@style/RaisedButtonDarkSOS"
+                android:onClick="onClick"
+                android:text="SOS"/>
 
-    <Button
-        android:id="@+id/btnMGEnviar"
-        android:onClick="onClick"
-        android:layout_width="200dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/fondo_celeste"
+            <Button
+                android:id="@+id/btnMGMarcar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:text="MARCAR"
+                android:theme="@style/RaisedButtonDark" />
 
-        android:text="ENVIAR"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMGMarcar" />
+            <Button
+                android:id="@+id/btnMGHistorial"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@id/btnMGMarcar"
+                android:theme="@style/RaisedButtonDark"
+                android:text="HISTORIAL" />
 
-    <Button
-        android:id="@+id/btnMGNovedades"
-        android:onClick="onClick"
-        android:layout_width="200dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="4dp"
-        android:background="@drawable/fondo_verde"
+            <Button
+                android:id="@+id/btnMGEnviar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@id/btnMGNovedades"
+                android:theme="@style/RaisedButtonDark"
+                android:text="ENVIAR" />
 
-        android:text="NOVEDADES"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMGHistorial" />
+            <Button
+                android:id="@+id/btnMGNovedades"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:theme="@style/RaisedButtonDark"
+                android:text="NOVEDADES" />
 
-</android.support.constraint.ConstraintLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</android.support.design.widget.CoordinatorLayout>
