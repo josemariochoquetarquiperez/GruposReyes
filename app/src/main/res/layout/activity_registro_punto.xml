@@ -2,10 +2,9 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/btnGuardarQR"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#04375A"
+    android:background="#FF04375A"
     tools:context=".RegistroPunto">
 
     <ImageView
@@ -51,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
         android:layout_marginTop="32dp"
-        android:onClick="onClick"
+        android:onClick="generadorQR"
         android:text="GENERAR QR"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPuntoQR" />
@@ -99,4 +98,5 @@
         app:layout_constraintStart_toStartOf="@+id/imgImagenQR"
         app:layout_constraintTop_toTopOf="@+id/imgImagenQR"
         app:srcCompat="@drawable/reyes" />
+
 </android.support.constraint.ConstraintLayout>

@@ -1,6 +1,5 @@
 package com.grupodeseguridadreyes.reyes;
 
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
@@ -15,9 +14,6 @@ import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
 
 public class RegistroPunto extends AppCompatActivity {
-
-
-
     private EditText TXTNombreEmpresaQR;
     private EditText TXTPuntoQR;
 
@@ -25,6 +21,7 @@ public class RegistroPunto extends AppCompatActivity {
     private Button BTNGuardarQR;
 
     private ImageView IMGImganenQR;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +37,8 @@ public class RegistroPunto extends AppCompatActivity {
         IMGImganenQR = findViewById(R.id.imgImagenQR);
 
     }
-    public void onClick(View view){
+
+    public void generadorQR(View view) {
         QRCodeWriter qrCodeWriter = new QRCodeWriter();
         try {
             BitMatrix bitMatrix = qrCodeWriter.encode(TXTNombreEmpresaQR.getText().toString()+""+TXTPuntoQR.getText().toString(), BarcodeFormat.QR_CODE, 200,200);
@@ -56,7 +54,7 @@ public class RegistroPunto extends AppCompatActivity {
             e.printStackTrace();
         }
 
+
+
     }
-
 }
-
