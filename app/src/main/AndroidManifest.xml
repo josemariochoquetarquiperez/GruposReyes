@@ -13,24 +13,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RegistroPunto"/>
+        <activity android:name=".RegistroPunto" android:screenOrientation="portrait"/>
 
-        <activity android:name=".MarcarControl" />
-        <activity android:name=".VerificarSupervisor" >
+        <activity android:name=".MarcarControl" android:screenOrientation="portrait"/>
+        <activity android:name=".VerificarSupervisor" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SOS" />
-        <activity android:name=".RegistroGuardia" />
-        <activity android:name=".RegistrarEmpresa" />
-        <activity android:name=".Novedades" />
-        <activity android:name=".MenuGuardia" />
-        <activity android:name=".Historial" />
-        <activity android:name=".Enviar" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".SOS" android:screenOrientation="portrait"/>
+        <activity android:name=".RegistroGuardia" android:screenOrientation="portrait"/>
+        <activity android:name=".RegistrarEmpresa" android:screenOrientation="portrait"/>
+        <activity android:name=".Novedades" android:screenOrientation="portrait"/>
+        <activity android:name=".MenuGuardia" android:screenOrientation="portrait"/>
+        <activity android:name=".Historial" android:screenOrientation="portrait"/>
+        <activity android:name=".Enviar" android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity" android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
